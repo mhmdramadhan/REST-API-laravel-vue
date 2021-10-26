@@ -79,7 +79,14 @@ class TransactionController extends Controller
      */
     public function show($id)
     {
-        //
+        $transaction = Transaction::findOrFail($id);
+
+        $response = [
+            'message' => 'Detail of transaction resource',
+            'data' => $transaction
+        ];
+
+        return response()->json($response, Response::HTTP_OK);
     }
 
     /**
