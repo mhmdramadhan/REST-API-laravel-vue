@@ -25,4 +25,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::put('/transaction/{id}', [TransactionController::class, 'update']);
 // Route::delete('/transaction/{id}', [TransactionController::class, 'destroy']);
 
-Route::resource('/transaction/{id}', TransactionController::class)->except(['create', 'edit']);
+Route::resource('/transaction', TransactionController::class)->except(['create', 'edit']);
